@@ -41,6 +41,9 @@
   <ItemGroup>
     <Compile Include="HiddenPolymorphism\Employee.cs" />
     <Compile Include="HiddenPolymorphism\EmployeeType.cs" />
+    <Compile Include="IfBattle\Customer.cs" />
+    <Compile Include="IfBattle\DiscountCalculator.cs" />
+    <Compile Include="IfBattle\Order.cs" />
     <Compile Include="PersistingEnums\Persistence.cs" />
     <Compile Include="PersistingEnums\Person.cs" />
     <Compile Include="PersistingEnums\Title.cs" />
