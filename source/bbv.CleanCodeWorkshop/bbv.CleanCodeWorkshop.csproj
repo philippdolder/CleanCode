@@ -48,7 +48,12 @@
     <Compile Include="PersistingEnums\Person.cs" />
     <Compile Include="PersistingEnums\Title.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singletons\Invoice.cs" />
+    <Compile Include="Singletons\InvoicePrintingService.cs" />
+    <Compile Include="Singletons\InvoiceService.cs" />
+    <Compile Include="Singletons\Printer.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
