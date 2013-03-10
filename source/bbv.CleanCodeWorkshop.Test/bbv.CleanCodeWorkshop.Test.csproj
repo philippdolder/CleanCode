@@ -56,6 +56,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singletons\InvoicePrintingServiceTest.cs" />
     <Compile Include="Singletons\InvoiceServiceTest.cs" />
+    <Compile Include="UseNullObjects\LargeAccountCustomerTest.cs" />
+    <Compile Include="UseNullObjects\NewCustomerTest.cs" />
+    <Compile Include="UseNullObjects\NewsletterIntegrationTest.cs" />
+    <Compile Include="UseNullObjects\NewsletterServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
