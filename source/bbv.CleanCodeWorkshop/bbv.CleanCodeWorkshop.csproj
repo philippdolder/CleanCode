@@ -46,6 +46,7 @@
     <Compile Include="IfBattle\Order.cs" />
     <Compile Include="OutParameters\Invoice.cs" />
     <Compile Include="OutParameters\InvoiceParser.cs" />
+    <Compile Include="Overloads\Order.cs" />
     <Compile Include="PersistingEnums\Persistence.cs" />
     <Compile Include="PersistingEnums\Person.cs" />
     <Compile Include="PersistingEnums\Title.cs" />
