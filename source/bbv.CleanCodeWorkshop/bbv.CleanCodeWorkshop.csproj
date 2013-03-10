@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnexpectedSideEffect\Customer.cs" />
+    <Compile Include="UnexpectedSideEffect\CustomerFinder.cs" />
     <Compile Include="HiddenPolymorphism\Employee.cs" />
     <Compile Include="HiddenPolymorphism\EmployeeType.cs" />
     <Compile Include="IfBattle\Customer.cs" />

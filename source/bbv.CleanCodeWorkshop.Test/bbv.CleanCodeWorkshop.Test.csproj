@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UnexpectedSideEffect\CustomerFinderTest.cs" />
     <Compile Include="HiddenPolymorphism\EmployeeTest.cs" />
     <Compile Include="IfBattle\DiscountCalculatorTest.cs" />
     <Compile Include="OutParameters\InvoiceParserTest.cs" />
