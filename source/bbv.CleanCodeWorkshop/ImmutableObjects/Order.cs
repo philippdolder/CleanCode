@@ -4,13 +4,14 @@
 
     public class Order
     {
-        public Order()
+        public Order(string address, IEnumerable<Position> positions)
         {
-            this.Positions = new List<Position>();
+            this.Address = address;
+            this.Positions = positions;
         }
 
-        public string Address { get; set; }
+        public string Address { get; private set; }
 
-        public IList<Position> Positions { get; private set; }
+        public IEnumerable<Position> Positions { get; private set; }
     }
 }

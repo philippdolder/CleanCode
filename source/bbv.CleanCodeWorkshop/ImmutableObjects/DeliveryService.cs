@@ -13,9 +13,7 @@
 
         public void Deliver(Order order)
         {
-            order.Positions.Add(new Position { Item = "Windows 8", Amount = 2 });
-            order.Address += "; Switzerland";
-            Parcel parcel = this.boxingService.Box(order);
+            Parcel parcel = this.boxingService.Box(order.Positions);
 
             this.mailService.Deliver(order.Address, parcel);
         } 

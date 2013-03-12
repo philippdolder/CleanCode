@@ -2,8 +2,14 @@
 {
     public class Position
     {
-        public string Item { get; set; }
+        public Position(string item, int amount)
+        {
+            this.Item = item;
+            this.Amount = amount;
+        }
 
-        public int Amount { get; set; }
+        public string Item { get; private set; }
+
+        public int Amount { get; private set; }
     }
 }
