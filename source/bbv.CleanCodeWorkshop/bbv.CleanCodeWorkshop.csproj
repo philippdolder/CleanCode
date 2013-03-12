@@ -39,6 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImmutableObjects\DeliveryService.cs" />
+    <Compile Include="ImmutableObjects\IMailService.cs" />
+    <Compile Include="ImmutableObjects\Order.cs" />
+    <Compile Include="ImmutableObjects\IBoxingService.cs" />
+    <Compile Include="ImmutableObjects\Parcel.cs" />
+    <Compile Include="ImmutableObjects\Position.cs" />
     <Compile Include="UnexpectedSideEffect\Customer.cs" />
     <Compile Include="UnexpectedSideEffect\CustomerFinder.cs" />
     <Compile Include="HiddenPolymorphism\Employee.cs" />
