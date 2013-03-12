@@ -5,7 +5,7 @@
 
     public class InvoiceParser
     {
-         public bool TryParse(XDocument invoiceDescription, out Invoice invoice)
+         public InvoiceParseResult TryParse(XDocument invoiceDescription)
          {
              XElement invoiceElement = invoiceDescription.Element("Invoice");
              XElement customerElement = invoiceElement.Element("Customer");
@@ -13,12 +13,11 @@
 
              if (!IsInvoiceValid(customerElement, amountElement))
              {
-                 invoice = null;
-                 return false;
+                 return InvoiceParseResult.CreateUnsuccessful();
              }
 
-             invoice = new Invoice(customerElement.Value, Convert.ToInt32(amountElement.Value));
-             return true;
+             var invoice = new Invoice(customerElement.Value, Convert.ToInt32(amountElement.Value));
+             return InvoiceParseResult.CreateSuccessful(invoice);
          }
 
         private bool IsInvoiceValid(XElement customerElement, XElement amountElement)

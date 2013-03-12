@@ -48,6 +48,7 @@
     <Compile Include="ImmutableObjects\IBoxingService.cs" />
     <Compile Include="ImmutableObjects\Parcel.cs" />
     <Compile Include="ImmutableObjects\Position.cs" />
+    <Compile Include="OutParameters\InvoiceParseResult.cs" />
     <Compile Include="UnexpectedSideEffect\Customer.cs" />
     <Compile Include="UnexpectedSideEffect\CustomerFinder.cs" />
     <Compile Include="HiddenPolymorphism\IEmployee.cs" />

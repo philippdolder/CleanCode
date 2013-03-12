@@ -5,8 +5,6 @@
     using FluentAssertions;
     using NUnit.Framework;
 
-    // TODO: Refactor the code so that you don't have an 'out' parameter anymore. But don't return 'null' when you cannot parse the invoice!
-    // Hint: use a Result object
     [TestFixture]
     public class InvoiceParserTest
     {
@@ -24,10 +22,9 @@
             const string Customer = "bbv Software Services AG";
             const int Amount = 1200;
 
-            Invoice invoice;
-            this.testee.TryParse(CreateInvoice(Customer, Amount), out invoice);
+            InvoiceParseResult result = this.testee.TryParse(CreateInvoice(Customer, Amount));
 
-            invoice.ShouldHave().AllProperties().EqualTo(new Invoice(Customer, Amount));
+            result.Invoice.ShouldHave().AllProperties().EqualTo(new Invoice(Customer, Amount));
         }
 
         [Test]
@@ -36,30 +33,18 @@
             const string Customer = "bbv Software Services AG";
             const int Amount = 1200;
 
-            Invoice invoice;
-            bool result = this.testee.TryParse(CreateInvoice(Customer, Amount), out invoice);
+            InvoiceParseResult result = this.testee.TryParse(CreateInvoice(Customer, Amount));
 
-            result.Should().BeTrue();
-        }
-
-        [TestCase("", "100")]
-        [TestCase("bbv", "")]
-        public void InvoiceIsNull_WhenInvoiceCannotBeParsed(string customer, string amount)
-        {
-            Invoice invoice;
-            this.testee.TryParse(CreateInvoice(customer, amount), out invoice);
-
-            invoice.Should().BeNull();
+            result.Parsed.Should().BeTrue();
         }
 
         [TestCase("", "100")]
         [TestCase("bbv", "")]
         public void ReturnsFalse_WhenInvoiceCannotBeParsed(string customer, string amount)
         {
-            Invoice invoice;
-            bool result = this.testee.TryParse(CreateInvoice(customer, amount), out invoice);
+            InvoiceParseResult result = this.testee.TryParse(CreateInvoice(customer, amount));
 
-            result.Should().BeFalse();
+            result.Parsed.Should().BeFalse();
         }
 
         private static XDocument CreateInvoice(string customer, string amount)
@@ -72,7 +57,6 @@
             root.Add(new XElement("Amount", amount));
 
             return invoice;
-            
         }
 
         private static XDocument CreateInvoice(string customer, int amount)
