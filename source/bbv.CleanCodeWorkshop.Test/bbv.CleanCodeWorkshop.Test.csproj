@@ -48,9 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HiddenPolymorphism\EngineerTest.cs" />
+    <Compile Include="HiddenPolymorphism\ManagerTest.cs" />
+    <Compile Include="HiddenPolymorphism\SalesmanTest.cs" />
     <Compile Include="ImmutableObjects\DeliveryServiceTest.cs" />
     <Compile Include="UnexpectedSideEffect\CustomerFinderTest.cs" />
-    <Compile Include="HiddenPolymorphism\EmployeeTest.cs" />
     <Compile Include="IfBattle\DiscountCalculatorTest.cs" />
     <Compile Include="OutParameters\InvoiceParserTest.cs" />
     <Compile Include="Overloads\OrderTest.cs" />
