@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Salesman.cs" company="bbv Software Services AG">
+// <copyright file="WarriorBuilder.cs" company="bbv Software Services AG">
 //   Copyright (c) 2013
 //   
 //   Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,22 +16,32 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Bbv.CleanCodeWorkshop.HiddenPolymorphism
+namespace Bbv.CleanCodeWorkshop.ExceptionsForControlFlow
 {
-    public class Salesman : IEmployee
+    public class LoginService
     {
-        private readonly int monthlySalary;
-        private readonly int commission;
+        private readonly IUserAuthenticator userAuthenticator;
 
-        public Salesman(int monthlySalary, int commission)
+        public LoginService(IUserAuthenticator userAuthenticator)
         {
-            this.monthlySalary = monthlySalary;
-            this.commission = commission;
+            this.userAuthenticator = userAuthenticator;
         }
 
-        public int CalculateSalary()
+        public LoginResult Login(string username, string password)
         {
-            return this.monthlySalary + this.commission;
+            try
+            {
+                string token = this.userAuthenticator.Authenticate(username, password);
+                return new LoginResult(token, "Login successful");
+            }
+            catch (WrongPasswordException)
+            {
+                return new LoginResult(null, "Password wrong");
+            }
+            catch (UnknownUserException)
+            {
+                return new LoginResult(null, "User not found");
+            }
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="SalesmanTest.cs" company="bbv Software Services AG">
+// <copyright file="WarriorBuilder.cs" company="bbv Software Services AG">
 //   Copyright (c) 2013
 //   
 //   Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,24 +16,31 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Bbv.CleanCodeWorkshop.HiddenPolymorphism
+namespace Bbv.CleanCodeWorkshop.UseNullObjects
 {
-    using FluentAssertions;
-    using NUnit.Framework;
-
-    [TestFixture]
-    public class SalesmanTest
+    // This implementation is a simple implementation to simplify the logic to find the correct customer object
+    public class SimpleCustomerFinder : ICustomerFinder
     {
-        [Test]
-        public void HasCommission()
+        private readonly IMailDispatcher mailDispatcher;
+
+        public SimpleCustomerFinder(IMailDispatcher mailDispatcher)
         {
-            const int MonthlySalary = 6000;
-            const int Commission = 500;
+            this.mailDispatcher = mailDispatcher;
+        }
 
-            var salesman = new Salesman(MonthlySalary, Commission);
-            int salaryToPay = salesman.CalculateSalary();
+        public ICustomer Find(string customerName)
+        {
+            if (customerName == "bbv")
+            {
+                return new LargeAccountCustomer(this.mailDispatcher);
+            }
 
-            salaryToPay.Should().Be(MonthlySalary + Commission);
+            if (customerName == "bbv ICT")
+            {
+                return new NewCustomer(this.mailDispatcher);
+            }
+
+            return new NullCustomer();
         }
     }
 }

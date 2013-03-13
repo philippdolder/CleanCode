@@ -1,5 +1,5 @@
-// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Titles.cs" company="bbv Software Services AG">
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="WarriorBuilder.cs" company="bbv Software Services AG">
 //   Copyright (c) 2013
 //   
 //   Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,12 +16,18 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Bbv.CleanCodeWorkshop.PersistingEnums
+namespace Bbv.CleanCodeWorkshop.ExceptionsForControlFlow
 {
-    public static class Titles
+    public class LoginResult
     {
-        public const string Sir = "Sir";
-        public const string Madam = "Madam";
-        public const string Miss = "Ms";
+        public LoginResult(string token, string message)
+        {
+            this.Message = message;
+            this.Token = token;
+        }
+
+        public string Token { get; private set; }
+
+        public string Message { get; private set; }
     }
 }

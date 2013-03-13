@@ -46,6 +46,13 @@
     <Compile Include="IfBattle\LargeAccountCustomerDiscountStrategy.cs" />
     <Compile Include="IfBattle\NewCustomerDiscountStrategy.cs" />
     <Compile Include="IfBattle\RegularCustomerDiscountStrategy.cs" />
+    <Compile Include="ExceptionsForControlFlow\ITokenGenerator.cs" />
+    <Compile Include="ExceptionsForControlFlow\IUserAuthenticator.cs" />
+    <Compile Include="ExceptionsForControlFlow\LoginService.cs" />
+    <Compile Include="ExceptionsForControlFlow\LoginResult.cs" />
+    <Compile Include="ExceptionsForControlFlow\UnknownUserException.cs" />
+    <Compile Include="ExceptionsForControlFlow\UserAuthenticator.cs" />
+    <Compile Include="ExceptionsForControlFlow\WrongPasswordException.cs" />
     <Compile Include="ImmutableObjects\DeliveryService.cs" />
     <Compile Include="ImmutableObjects\IMailService.cs" />
     <Compile Include="ImmutableObjects\Order.cs" />
@@ -73,11 +80,10 @@
     <Compile Include="Singletons\InvoiceService.cs" />
     <Compile Include="Singletons\Printer.cs" />
     <Compile Include="UnexpectedSideEffect\FindCustomerResult.cs" />
-    <Compile Include="UseNullObjects\DummyCustomerFinder.cs" />
+    <Compile Include="UseNullObjects\SimpleCustomerFinder.cs" />
     <Compile Include="UseNullObjects\ICustomer.cs" />
     <Compile Include="UseNullObjects\ICustomerFinder.cs" />
     <Compile Include="UseNullObjects\IMailDispatcher.cs" />
-    <Compile Include="UseNullObjects\Invoice.cs" />
     <Compile Include="UseNullObjects\LargeAccountCustomer.cs" />
     <Compile Include="UseNullObjects\NewCustomer.cs" />
     <Compile Include="UseNullObjects\NewsletterService.cs" />

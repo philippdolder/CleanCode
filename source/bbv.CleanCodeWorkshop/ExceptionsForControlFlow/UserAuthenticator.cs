@@ -16,20 +16,39 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Bbv.CleanCodeWorkshop.ImmutableObjects
+namespace Bbv.CleanCodeWorkshop.ExceptionsForControlFlow
 {
     using System.Collections.Generic;
 
-    public class Order
+    public class UserAuthenticator : IUserAuthenticator
     {
-        public Order(string address, IEnumerable<Position> positions)
+        // username is the key, password is the value
+        private readonly IDictionary<string, string> knownUsers;
+        private readonly ITokenGenerator tokenGenerator;
+
+        public UserAuthenticator(IDictionary<string, string> knownUsers, ITokenGenerator tokenGenerator)
         {
-            this.Address = address;
-            this.Positions = positions;
+            this.knownUsers = knownUsers;
+            this.tokenGenerator = tokenGenerator;
         }
 
-        public string Address { get; private set; }
+        public string Authenticate(string username, string password)
+        {
+            try
+            {
+                string passwordOfUser = this.knownUsers[username];
 
-        public IEnumerable<Position> Positions { get; private set; }
+                if (passwordOfUser == password)
+                {
+                    return this.tokenGenerator.Get();
+                }
+                
+                throw new WrongPasswordException();
+            }
+            catch (KeyNotFoundException)
+            {
+                throw new UnknownUserException();
+            }
+        }
     }
 }

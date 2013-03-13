@@ -57,6 +57,7 @@
     <Compile Include="IfBattle\RegularCustomerDiscountStrategyTest.cs" />
     <Compile Include="ImmutableObjects\DeliveryServiceTest.cs" />
     <Compile Include="UnexpectedSideEffect\CustomerFinderTest.cs" />
+    <Compile Include="ExceptionsForControlFlow\LoginServiceIntegrationTest.cs" />
     <Compile Include="IfBattle\DiscountCalculatorIntegrationTest.cs" />
     <Compile Include="OutParameters\InvoiceParserTest.cs" />
     <Compile Include="Overloads\OrderTest.cs" />
