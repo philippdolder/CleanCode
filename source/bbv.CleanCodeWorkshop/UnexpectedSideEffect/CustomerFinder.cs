@@ -15,14 +15,14 @@
             this.customers.Add(2, new Customer("bbv ICT"));
         }
 
-        public Customer Find(int customerId)
+        public FindCustomerResult Find(int customerId)
         {
             if (!this.customers.ContainsKey(customerId))
             {
-                this.customers.Add(customerId, new Customer(string.Empty));
+                return FindCustomerResult.CreateNotFound();
             }
 
-            return this.customers[customerId];
+            return FindCustomerResult.CreateFound(this.customers[customerId]);
         }
     }
 }
