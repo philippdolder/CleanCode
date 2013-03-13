@@ -1,22 +1,7 @@
 ﻿namespace Bbv.CleanCodeWorkshop.Singletons
 {
-    public class Printer
+    public class Printer : IPrinter
     {
-        private static Printer instance;
-
-        public static Printer Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new Printer();
-                }
-
-                return instance;
-            }
-        }
-
         public void Print(Invoice invoice)
         {
         }

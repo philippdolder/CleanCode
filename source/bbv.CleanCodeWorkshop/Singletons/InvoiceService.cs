@@ -1,12 +1,17 @@
 ﻿namespace Bbv.CleanCodeWorkshop.Singletons
 {
-    using System;
-
     public class InvoiceService
     {
+        private readonly IDateProvider dateProvider;
+
+        public InvoiceService(IDateProvider dateProvider)
+        {
+            this.dateProvider = dateProvider;
+        }
+
         public Invoice CreateInvoice()
         {
-            return new Invoice(DateTime.Today);
+            return new Invoice(this.dateProvider.Today);
         }
     }
 }

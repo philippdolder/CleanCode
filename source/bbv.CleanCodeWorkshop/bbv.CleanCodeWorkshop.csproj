@@ -49,6 +49,8 @@
     <Compile Include="ImmutableObjects\Parcel.cs" />
     <Compile Include="ImmutableObjects\Position.cs" />
     <Compile Include="OutParameters\InvoiceParseResult.cs" />
+    <Compile Include="Singletons\IDateProvider.cs" />
+    <Compile Include="Singletons\IPrinter.cs" />
     <Compile Include="UnexpectedSideEffect\Customer.cs" />
     <Compile Include="UnexpectedSideEffect\CustomerFinder.cs" />
     <Compile Include="HiddenPolymorphism\IEmployee.cs" />

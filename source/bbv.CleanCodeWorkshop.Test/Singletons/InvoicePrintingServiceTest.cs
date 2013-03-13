@@ -1,29 +1,30 @@
 ﻿namespace Bbv.CleanCodeWorkshop.Singletons
 {
     using System;
-    using FluentAssertions;
+    using FakeItEasy;
     using NUnit.Framework;
 
     [TestFixture]
     public class InvoicePrintingServiceTest
     {
         private InvoicePrintingService testee;
+        private IPrinter printer;
 
-        // TODO: implement the Printer in a way that it can be asserted in the failing test. Replace the singleton with an Interface and an implementation
         [SetUp]
         public void SetUp()
         {
-            this.testee = new InvoicePrintingService();
+            this.printer = A.Fake<IPrinter>();
+            this.testee = new InvoicePrintingService(this.printer);
         }
 
         [Test]
         public void PrintsInvoice()
         {
             var invoice = new Invoice(new DateTime(2013, 2, 27));
+
             this.testee.PrintInvoice(invoice);
 
-            // Cannot assert that the invoice was printed :-(
-            true.Should().BeFalse();
+            A.CallTo(() => this.printer.Print(invoice)).MustHaveHappened();
         }
     }
 }

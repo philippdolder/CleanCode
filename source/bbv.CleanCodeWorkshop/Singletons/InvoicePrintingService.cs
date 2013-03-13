@@ -2,9 +2,16 @@
 {
     public class InvoicePrintingService
     {
+        private readonly IPrinter printer;
+
+        public InvoicePrintingService(IPrinter printer)
+        {
+            this.printer = printer;
+        }
+
         public void PrintInvoice(Invoice invoice)
         {
-            Printer.Instance.Print(invoice);
+            this.printer.Print(invoice);
         }
     }
 }
