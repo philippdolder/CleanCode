@@ -4,6 +4,7 @@
 
     public class Order
     {
+        private const string DefaultColor = "black";
         private readonly List<Position> positions = new List<Position>();
 
         public List<Position> Positions
@@ -11,19 +12,14 @@
             get { return this.positions; }
         }
 
-        public void AddPosition(string articleNumber, int amount)
-        {
-            this.AddPosition(articleNumber, amount, string.Empty);
-        }
-
         public void AddPosition(string articleNumber)
         {
-            this.AddPosition(articleNumber, 1);
+            this.AddPosition(articleNumber, 1, string.Empty, DefaultColor);
         }
 
-        public void AddPosition(string articleNumber, int amount, string size)
+        public void AddPosition(string articleNumber, int amount)
         {
-            this.AddPosition(articleNumber, amount, size, "black");
+            this.AddPosition(articleNumber, amount, string.Empty, DefaultColor);
         }
 
         public void AddPosition(string articleNumber, int amount, string size, string color)

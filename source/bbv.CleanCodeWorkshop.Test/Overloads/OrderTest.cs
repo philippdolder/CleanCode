@@ -3,8 +3,6 @@
     using FluentAssertions;
     using NUnit.Framework;
 
-    // TODO: Remove the overload with the signature 'AddPosition(string articleNumber, int amount, string size)' as it is never used
-    // TODO: Refactor the 'Order' class in a way that you have to change the minimum possible amount of code when you remove another overload in the future
     [TestFixture]
     public class OrderTest
     {
