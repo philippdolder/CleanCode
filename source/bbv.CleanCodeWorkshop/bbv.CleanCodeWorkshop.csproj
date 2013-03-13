@@ -62,7 +62,7 @@
     <Compile Include="Overloads\Order.cs" />
     <Compile Include="PersistingEnums\Persistence.cs" />
     <Compile Include="PersistingEnums\Person.cs" />
-    <Compile Include="PersistingEnums\Title.cs" />
+    <Compile Include="PersistingEnums\Titles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singletons\Invoice.cs" />
     <Compile Include="Singletons\InvoicePrintingService.cs" />

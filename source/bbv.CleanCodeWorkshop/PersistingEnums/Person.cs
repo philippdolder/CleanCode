@@ -4,6 +4,6 @@ namespace Bbv.CleanCodeWorkshop.PersistingEnums
     {
         public string Name { get; set; }
 
-        public Title Title { get; set; }
+        public string Title { get; set; }
     }
 }
