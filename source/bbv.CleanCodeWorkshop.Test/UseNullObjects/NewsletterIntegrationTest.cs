@@ -17,7 +17,7 @@
         {
             this.mailDispatcher = A.Fake<IMailDispatcher>();
 
-            this.testee = new NewsletterService(new DummyCustomerFinder(this.mailDispatcher));
+            this.testee = new NewsletterService(new SimpleCustomerFinder(this.mailDispatcher));
         }
 
         [Test]

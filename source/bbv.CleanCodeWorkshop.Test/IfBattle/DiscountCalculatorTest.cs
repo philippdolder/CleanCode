@@ -27,7 +27,7 @@
         }
 
         [Test]
-        public void Has5PercentDiscount_WhenCustomerIsGoodCustomer()
+        public void Has5PercentDiscount_WhenCustomerIsRegularCustomer()
         {
             var customer = new Customer { NumberOfOrders = 10 };
             var order = new Order(customer, 0);
@@ -38,7 +38,7 @@
         }
 
         [Test]
-        public void GoodCustomerHas2PercentExtraDiscount_WhenOrderIsWorth100OrMore()
+        public void RegularCustomerHas2PercentExtraDiscount_WhenOrderIsWorth100OrMore()
         {
             var customer = new Customer { NumberOfOrders = 10 };
             var order = new Order(customer, 100);

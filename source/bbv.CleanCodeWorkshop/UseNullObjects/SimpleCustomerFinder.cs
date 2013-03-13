@@ -1,11 +1,11 @@
 ﻿namespace Bbv.CleanCodeWorkshop.UseNullObjects
 {
-    // This implementation is a dummy implementation to simplify the logic to find the correct customer object
-    public class DummyCustomerFinder : ICustomerFinder
+    // This implementation is a simple implementation to simplify the logic to find the correct customer object
+    public class SimpleCustomerFinder : ICustomerFinder
     {
         private readonly IMailDispatcher mailDispatcher;
 
-        public DummyCustomerFinder(IMailDispatcher mailDispatcher)
+        public SimpleCustomerFinder(IMailDispatcher mailDispatcher)
         {
             this.mailDispatcher = mailDispatcher;
         }

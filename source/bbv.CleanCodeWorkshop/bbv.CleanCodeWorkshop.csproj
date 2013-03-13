@@ -63,7 +63,7 @@
     <Compile Include="Singletons\InvoicePrintingService.cs" />
     <Compile Include="Singletons\InvoiceService.cs" />
     <Compile Include="Singletons\Printer.cs" />
-    <Compile Include="UseNullObjects\DummyCustomerFinder.cs" />
+    <Compile Include="UseNullObjects\SimpleCustomerFinder.cs" />
     <Compile Include="UseNullObjects\ICustomer.cs" />
     <Compile Include="UseNullObjects\ICustomerFinder.cs" />
     <Compile Include="UseNullObjects\IMailDispatcher.cs" />

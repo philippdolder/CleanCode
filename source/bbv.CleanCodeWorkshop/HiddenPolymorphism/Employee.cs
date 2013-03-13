@@ -34,7 +34,7 @@
                 return this.monthlySalary + this.commission;
             }
 
-            throw new Exception("EmployeType: `" + this.type + "` is not supported!");
+            throw new InvalidOperationException("EmployeType: `" + this.type + "` is not supported!");
         }
     }
 }

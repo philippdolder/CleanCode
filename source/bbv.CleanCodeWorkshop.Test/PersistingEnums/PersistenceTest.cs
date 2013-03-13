@@ -22,8 +22,8 @@
         {
             const string Name = "Clean Coder";
             var person = new Person { Name = Name, Title = Title.Sir };
-            this.testee.Save(person);
 
+            this.testee.Save(person);
             Person loadedPerson = this.testee.Load(Name);
 
             loadedPerson.ShouldHave().AllProperties().EqualTo(new Person { Name = person.Name, Title = person.Title });

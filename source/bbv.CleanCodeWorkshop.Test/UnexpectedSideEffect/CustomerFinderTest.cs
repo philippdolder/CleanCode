@@ -1,9 +1,10 @@
 ﻿namespace Bbv.CleanCodeWorkshop.UnexpectedSideEffect
 {
-    using NUnit.Framework;
     using FluentAssertions;
+    using NUnit.Framework;
 
-    // TODO: Change the CustomerFinder implementation so that the 'Find' method has no side effects. e.g. add a query method to check for a customer to exist!
+    // TODO: Change the SimpleCustomerFinder implementation so that the 'Find' method has no side effects.
+    // e.g. add a query method to check for a customer to exist! or return a FindResult
     // The finder should never create a customer. Creation of customers should be handled by another class (Single Responsibility Principle)
     [TestFixture]
     public class CustomerFinderTest
@@ -23,7 +24,7 @@
 
             Customer customer = this.testee.Find(Id);
 
-            customer.CustomerName.Should().Be("bbv");
+            customer.Name.Should().Be("bbv");
         }
 
         [Test]

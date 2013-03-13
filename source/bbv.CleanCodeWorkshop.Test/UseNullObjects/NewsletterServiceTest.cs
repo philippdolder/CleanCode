@@ -2,8 +2,8 @@
 {
     using System;
     using FakeItEasy;
-    using NUnit.Framework;
     using FluentAssertions;
+    using NUnit.Framework;
 
     [TestFixture]
     public class NewsletterServiceTest
@@ -30,7 +30,7 @@
             A.CallTo(() => this.customerFinder.Find(Bbv)).Returns(bbv);
             A.CallTo(() => this.customerFinder.Find(BbvIct)).Returns(bbvIct);
 
-            var  customers = new[] { Bbv, BbvIct };
+            var customers = new[] { Bbv, BbvIct };
             this.testee.SendNewsToCustomers(customers);
 
             A.CallTo(() => bbv.SendNewsletter()).MustHaveHappened();
