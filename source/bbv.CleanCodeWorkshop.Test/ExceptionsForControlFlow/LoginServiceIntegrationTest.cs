@@ -23,7 +23,6 @@ namespace Bbv.CleanCodeWorkshop.ExceptionsForControlFlow
     using FluentAssertions;
     using NUnit.Framework;
 
-    // TODO: Change the code so that you don't control the program flow with exceptions. You are allowed to eliminate classes if it helps you simplify the code
     [TestFixture]
     public class LoginServiceIntegrationTest
     {
@@ -37,7 +36,7 @@ namespace Bbv.CleanCodeWorkshop.ExceptionsForControlFlow
             this.knownUsers = new Dictionary<string, string>();
             this.tokenGenerator = A.Fake<ITokenGenerator>();
 
-            this.testee = new LoginService(new UserAuthenticator(this.knownUsers, this.tokenGenerator));
+            this.testee = new LoginService(this.knownUsers, this.tokenGenerator);
         }
 
         [Test]
