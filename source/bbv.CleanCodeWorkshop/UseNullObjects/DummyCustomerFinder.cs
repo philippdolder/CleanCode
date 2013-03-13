@@ -22,8 +22,7 @@
                 return new NewCustomer(this.mailDispatcher);
             }
 
-            // TODO: return a null implementation instead of a null reference!
-            return null;
+            return new NullCustomer();
         }
     }
 }

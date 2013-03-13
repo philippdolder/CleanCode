@@ -16,11 +16,7 @@
             foreach (string customerName in customerNames)
             {
                 var customer = this.customerFinder.Find(customerName);
-
-                if (customer != null)
-                {
-                    customer.SendNewsletter();
-                }
+                customer.SendNewsletter();
             }
         }
     }

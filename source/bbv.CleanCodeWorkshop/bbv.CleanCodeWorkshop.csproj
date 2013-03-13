@@ -77,6 +77,7 @@
     <Compile Include="UseNullObjects\LargeAccountCustomer.cs" />
     <Compile Include="UseNullObjects\NewCustomer.cs" />
     <Compile Include="UseNullObjects\NewsletterService.cs" />
+    <Compile Include="UseNullObjects\NullCustomer.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

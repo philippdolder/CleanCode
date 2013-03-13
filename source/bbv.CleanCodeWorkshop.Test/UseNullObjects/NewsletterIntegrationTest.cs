@@ -3,9 +3,6 @@
     using FakeItEasy;
     using NUnit.Framework;
 
-    // TODO: Refactor the system (UseNullObjects namespace) in a way that the 'if' statement in the NewsletterService is no longer required! Use a Null object implementation
-    // A Null object is an object with defined neutral ("null") behavior (see: http://en.wikipedia.org/wiki/Null_Object_pattern)
-    // TODO: Remember to also remove tests that are no longer required if there are any
     [TestFixture]
     public class NewsletterIntegrationTest
     {
