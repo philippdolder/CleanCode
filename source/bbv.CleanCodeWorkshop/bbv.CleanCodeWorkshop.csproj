@@ -39,6 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExceptionsForControlFlow\ITokenGenerator.cs" />
+    <Compile Include="ExceptionsForControlFlow\IUserAuthenticator.cs" />
+    <Compile Include="ExceptionsForControlFlow\LoginService.cs" />
+    <Compile Include="ExceptionsForControlFlow\LoginResult.cs" />
+    <Compile Include="ExceptionsForControlFlow\UnknownUserException.cs" />
+    <Compile Include="ExceptionsForControlFlow\UserAuthenticator.cs" />
+    <Compile Include="ExceptionsForControlFlow\WrongPasswordException.cs" />
     <Compile Include="ImmutableObjects\DeliveryService.cs" />
     <Compile Include="ImmutableObjects\IMailService.cs" />
     <Compile Include="ImmutableObjects\Order.cs" />

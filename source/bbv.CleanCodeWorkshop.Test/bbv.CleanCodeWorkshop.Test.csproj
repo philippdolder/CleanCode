@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExceptionsForControlFlow\LoginServiceIntegrationTest.cs" />
     <Compile Include="ImmutableObjects\DeliveryServiceTest.cs" />
     <Compile Include="UnexpectedSideEffect\CustomerFinderTest.cs" />
     <Compile Include="HiddenPolymorphism\EmployeeTest.cs" />
