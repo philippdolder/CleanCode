@@ -4,6 +4,7 @@
     using NUnit.Framework;
 
     // TODO: Refactor the DiscountCalculator in a way that it allows adding more rules and then fix the failing test at the end!
+    // Important: Make sure you do small steps. Don't let all your tests fail, use parallel implementation etc.
     [TestFixture]
     public class DiscountCalculatorTest
     {
@@ -70,10 +71,10 @@
         }
 
         [Test]
-        public void LargeAccountCustomerHas6PercentDiscount_WhenOrderIsLessThan100()
+        public void LargeAccountCustomerHas6PercentDiscount_WhenOrderIsLessThan200()
         {
             var customer = new Customer { NumberOfOrders = 1000 };
-            var order = new Order(customer, 99);
+            var order = new Order(customer, 199);
 
             int discount = this.testee.CalculateDiscount(order);
 
@@ -81,7 +82,7 @@
         }
 
         [Test]
-        public void LargeAccountCustomerHas8PercentDiscount_WhenOrderIsWorth100OrMore()
+        public void LargeAccountCustomerHas8PercentDiscount_WhenOrderIsWorth200OrMore()
         {
             var customer = new Customer { NumberOfOrders = 1000 };
             var order = new Order(customer, 200);
