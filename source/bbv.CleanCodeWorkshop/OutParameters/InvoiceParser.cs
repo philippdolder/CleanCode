@@ -29,7 +29,7 @@ namespace Bbv.CleanCodeWorkshop.OutParameters
              XElement customerElement = invoiceElement.Element("Customer");
              XElement amountElement = invoiceElement.Element("Amount");
 
-             if (!IsInvoiceValid(customerElement, amountElement))
+             if (!this.IsInvoiceValid(customerElement, amountElement))
              {
                  return InvoiceParseResult.CreateUnsuccessful();
              }

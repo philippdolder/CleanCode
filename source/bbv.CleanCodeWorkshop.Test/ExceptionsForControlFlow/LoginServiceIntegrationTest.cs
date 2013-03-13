@@ -78,6 +78,5 @@ namespace Bbv.CleanCodeWorkshop.ExceptionsForControlFlow
 
             loginResult.Message.Should().Be("User not found");
         }
-
     }
 }

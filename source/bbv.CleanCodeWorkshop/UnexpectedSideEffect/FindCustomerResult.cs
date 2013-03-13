@@ -56,7 +56,5 @@ namespace Bbv.CleanCodeWorkshop.UnexpectedSideEffect
         {
             return new FindCustomerResult(customer);
         }
-
-
     }
 }

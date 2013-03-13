@@ -1,5 +1,5 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Invoice.cs" company="bbv Software Services AG">
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Position.cs" company="bbv Software Services AG">
 //   Copyright (c) 2013
 //   
 //   Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,18 +16,24 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Bbv.CleanCodeWorkshop.OutParameters
+namespace Bbv.CleanCodeWorkshop.Overloads
 {
-    public class Invoice
+    public class Position
     {
-        public Invoice(string customer, int amount)
+        public Position(string articleNumber, int amount, string size, string color)
         {
-            this.Customer = customer;
+            this.ArticleNumber = articleNumber;
             this.Amount = amount;
+            this.Size = size;
+            this.Color = color;
         }
 
-        public string Customer { get; private set; }
+        public string ArticleNumber { get; private set; }
 
         public int Amount { get; private set; }
+
+        public string Size { get; private set; }
+
+        public string Color { get; private set; }
     }
 }

@@ -45,20 +45,4 @@ namespace Bbv.CleanCodeWorkshop.Overloads
             this.Positions.Add(new Position(articleNumber, amount, size, color));
         }
     }
-
-    public class Position
-    {
-        public Position(string articleNumber, int amount, string size, string color)
-        {
-            this.ArticleNumber = articleNumber;
-            this.Amount = amount;
-            this.Size = size;
-            this.Color = color;
-        }
-
-        public string ArticleNumber { get; private set; }
-        public int Amount { get; private set; }
-        public string Size { get; private set; }
-        public string Color { get; private set; }
-    }
 }

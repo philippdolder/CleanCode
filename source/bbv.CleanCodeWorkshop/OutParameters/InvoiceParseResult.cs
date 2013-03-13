@@ -24,16 +24,6 @@ namespace Bbv.CleanCodeWorkshop.OutParameters
     {
         private readonly Invoice invoice;
 
-        public static InvoiceParseResult CreateSuccessful(Invoice invoice)
-        {
-            return new InvoiceParseResult(true, invoice);
-        }
-
-        public static InvoiceParseResult CreateUnsuccessful()
-        {
-            return new InvoiceParseResult(false, null);
-        }
-
         private InvoiceParseResult(bool parsed, Invoice invoice)
         {
             this.Parsed = parsed;
@@ -53,6 +43,16 @@ namespace Bbv.CleanCodeWorkshop.OutParameters
 
                 return this.invoice;
             }
+        }
+
+        public static InvoiceParseResult CreateSuccessful(Invoice invoice)
+        {
+            return new InvoiceParseResult(true, invoice);
+        }
+
+        public static InvoiceParseResult CreateUnsuccessful()
+        {
+            return new InvoiceParseResult(false, null);
         }
     }
 }
