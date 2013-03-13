@@ -74,7 +74,6 @@
     <Compile Include="UseNullObjects\ICustomer.cs" />
     <Compile Include="UseNullObjects\ICustomerFinder.cs" />
     <Compile Include="UseNullObjects\IMailDispatcher.cs" />
-    <Compile Include="UseNullObjects\Invoice.cs" />
     <Compile Include="UseNullObjects\LargeAccountCustomer.cs" />
     <Compile Include="UseNullObjects\NewCustomer.cs" />
     <Compile Include="UseNullObjects\NewsletterService.cs" />
