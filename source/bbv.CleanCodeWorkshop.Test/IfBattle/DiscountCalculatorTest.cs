@@ -6,6 +6,7 @@
     using FluentAssertions;
     using NUnit.Framework;
 
+    // Important: Make sure you do small steps. Don't let all your tests fail, use parallel implementation etc.
     [TestFixture]
     public class DiscountCalculatorTest
     {
