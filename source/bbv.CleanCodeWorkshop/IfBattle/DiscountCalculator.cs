@@ -1,41 +1,33 @@
 ﻿namespace Bbv.CleanCodeWorkshop.IfBattle
 {
+    using System;
+    using System.Collections.Generic;
+
     public class DiscountCalculator
     {
+        private readonly IEnumerable<IDiscountStrategy> discountStrategies;
+
+        public DiscountCalculator(IEnumerable<IDiscountStrategy> discountStrategies)
+        {
+            this.discountStrategies = discountStrategies;
+        }
+
         public int CalculateDiscount(Order order)
         {
-            if (order.Customer.NumberOfOrders >= 1000)
+            int maxDiscount = int.MinValue;
+
+            foreach (var discountStrategy in this.discountStrategies)
             {
-                if (order.Value >= 200)
+                bool qualifies = discountStrategy.QualifiesForDiscount(order.Customer);
+
+                if (qualifies)
                 {
-                    return 8;
+                    int discount = discountStrategy.CalculateDiscount(order);
+                    maxDiscount = Math.Max(maxDiscount, discount);
                 }
-
-                return 6;
             }
 
-            if (order.Customer.NumberOfOrders >= 10)
-            {
-                int discount = 5;
-                if (order.Value >= 100)
-                {
-                    discount += 2;
-                }
-
-                return discount;
-            }
-
-            if (order.Value >= 200)
-            {
-                return 1;
-            }
-
-            if (order.Value < 30)
-            {
-                return -2;
-            }
-
-            return 0;
+            return maxDiscount;
         }
     }
 }

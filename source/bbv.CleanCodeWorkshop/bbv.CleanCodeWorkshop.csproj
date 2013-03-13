@@ -42,6 +42,10 @@
     <Compile Include="HiddenPolymorphism\Engineer.cs" />
     <Compile Include="HiddenPolymorphism\Manager.cs" />
     <Compile Include="HiddenPolymorphism\Salesman.cs" />
+    <Compile Include="IfBattle\IDiscountStrategy.cs" />
+    <Compile Include="IfBattle\LargeAccountCustomerDiscountStrategy.cs" />
+    <Compile Include="IfBattle\NewCustomerDiscountStrategy.cs" />
+    <Compile Include="IfBattle\RegularCustomerDiscountStrategy.cs" />
     <Compile Include="ImmutableObjects\DeliveryService.cs" />
     <Compile Include="ImmutableObjects\IMailService.cs" />
     <Compile Include="ImmutableObjects\Order.cs" />

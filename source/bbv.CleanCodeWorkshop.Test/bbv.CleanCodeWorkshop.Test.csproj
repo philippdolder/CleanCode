@@ -51,9 +51,13 @@
     <Compile Include="HiddenPolymorphism\EngineerTest.cs" />
     <Compile Include="HiddenPolymorphism\ManagerTest.cs" />
     <Compile Include="HiddenPolymorphism\SalesmanTest.cs" />
+    <Compile Include="IfBattle\DiscountCalculatorTest.cs" />
+    <Compile Include="IfBattle\LargeAccountCustomerDiscountStrategyTest.cs" />
+    <Compile Include="IfBattle\NewCustomerDiscountStrategyTest.cs" />
+    <Compile Include="IfBattle\RegularCustomerDiscountStrategyTest.cs" />
     <Compile Include="ImmutableObjects\DeliveryServiceTest.cs" />
     <Compile Include="UnexpectedSideEffect\CustomerFinderTest.cs" />
-    <Compile Include="IfBattle\DiscountCalculatorTest.cs" />
+    <Compile Include="IfBattle\DiscountCalculatorIntegrationTest.cs" />
     <Compile Include="OutParameters\InvoiceParserTest.cs" />
     <Compile Include="Overloads\OrderTest.cs" />
     <Compile Include="PersistingEnums\PersistenceTest.cs" />
