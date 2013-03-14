@@ -48,21 +48,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExceptionsForControlFlow\LoginServiceIntegrationTest.cs" />
-    <Compile Include="ImmutableObjects\DeliveryServiceTest.cs" />
-    <Compile Include="UnexpectedSideEffect\CustomerFinderTest.cs" />
-    <Compile Include="HiddenPolymorphism\EmployeeTest.cs" />
-    <Compile Include="IfBattle\DiscountCalculatorTest.cs" />
-    <Compile Include="OutParameters\InvoiceParserTest.cs" />
-    <Compile Include="Overloads\OrderTest.cs" />
-    <Compile Include="PersistingEnums\PersistenceTest.cs" />
+    <Compile Include="2 ExceptionsForControlFlow\LoginServiceIntegrationTest.cs" />
+    <Compile Include="1 ImmutableObjects\DeliveryServiceTest.cs" />
+    <Compile Include="1 UnexpectedSideEffect\CustomerFinderTest.cs" />
+    <Compile Include="2 HiddenPolymorphism\EmployeeTest.cs" />
+    <Compile Include="3 IfBattle\DiscountCalculatorTest.cs" />
+    <Compile Include="1 OutParameters\InvoiceParserTest.cs" />
+    <Compile Include="1 Overloads\OrderTest.cs" />
+    <Compile Include="1 PersistingEnums\PersistenceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Singletons\InvoicePrintingServiceTest.cs" />
-    <Compile Include="Singletons\InvoiceServiceTest.cs" />
-    <Compile Include="UseNullObjects\LargeAccountCustomerTest.cs" />
-    <Compile Include="UseNullObjects\NewCustomerTest.cs" />
-    <Compile Include="UseNullObjects\NewsletterIntegrationTest.cs" />
-    <Compile Include="UseNullObjects\NewsletterServiceTest.cs" />
+    <Compile Include="1 Singletons\InvoicePrintingServiceTest.cs" />
+    <Compile Include="1 Singletons\InvoiceServiceTest.cs" />
+    <Compile Include="1 UseNullObjects\LargeAccountCustomerTest.cs" />
+    <Compile Include="1 UseNullObjects\NewCustomerTest.cs" />
+    <Compile Include="1 UseNullObjects\NewsletterIntegrationTest.cs" />
+    <Compile Include="1 UseNullObjects\NewsletterServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
